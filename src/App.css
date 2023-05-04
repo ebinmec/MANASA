@@ -12,11 +12,14 @@ img {
   min-height: 100vh;
   width: 85vw;
   max-width: 1900px;
-  margin: 0rem auto;
+  /*margin: auto;*/
 }
 body {
   max-width: 100%;
   overflow-x: hidden;
+}
+.home-container{
+ margin-left: 6rem;
 }
 .form-control {
   display: block;
@@ -86,9 +89,10 @@ nav {
 .home-bannerImage-container {
   position: absolute;
   top: -100px;
-  right: -170px;
+  right: -400px;
   z-index: -2;
   max-width: 700px;
+  
 }
 .home-image-section {
   max-width: 600px;
