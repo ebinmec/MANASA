@@ -23,7 +23,7 @@ function App() {
         <Route path="/Home" element={<Home />} />
         <Route path="/Signup" element={<Signup />} />
         <Route path="/MovieRecc" element={<MovieRecc />} />
-
+       
       
     </Routes>
   </BrowserRouter>
