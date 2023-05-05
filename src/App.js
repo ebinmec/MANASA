@@ -33,24 +33,7 @@ function App() {
           </UserAuthContextProvider>
      </div>
       
-      {/* <Work />
-      <Testimonial />
-      <Contact /> */}
-      {/*Footer */}
-    
-    <BrowserRouter>
-    <Routes>
-      <Route exact path="/" element={<Login/>}/>
-        <Route path="/Footer" element={<Footer />} />
-        <Route path="/Home" element={<Home />} />
-        <Route path="/Signup" element={<Signup />} />
-        <Route path="/MovieRecc" element={<MovieRecc />} />
-       
-      
-    </Routes>
-  </BrowserRouter>
-  </div>
->>>>>>> 24373364d7b019df85e64b73e739c342b37e14d2
+  
   );
 }
 
