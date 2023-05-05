@@ -14,15 +14,15 @@ CORS(app)
 # Main Function for scraping
 def main(emotion):
     
-    if (emotion == "Sad"):
+    if (emotion == "Sad" or emotion=="sad"):
         urlhere = 'https://www.imdb.com/search/title/title_type=movie&genres=romance,comedy&sort=num_votes,desc&explore=title_type,genres'
-    elif (emotion == "Happy"):
+    elif (emotion == "Happy" or emotion=="happy"):
         urlhere = 'https://www.imdb.com/search/title/?title_type=movie&genres=sci-fi,action&sort=num_votes,desc&explore=title_type,genres'
-    elif (emotion == "Bored"):
+    elif (emotion == "Bored" or emotion=="bored"):
         urlhere = 'https://www.imdb.com/search/title/?title_type=movie&genres=mystery,thriller&sort=num_votes,desc&explore=title_type,genres'
-    elif (emotion == "Angry"):
+    elif (emotion == "Angry" or emotion=="angry"):
         urlhere = 'https://www.imdb.com/search/title/?title_type=feature&genres=musical&sort=num_votes,desc'
-    elif (emotion == "Stressed"):
+    elif (emotion == "Stressed" or emotion=="stressed"):
         urlhere = 'https://www.imdb.com/search/title/?title_type=movie&genres=fantasy,adventure&sort=num_votes,desc&explore=title_type,genres'
     # HTTP request to get the data of
     # the whole page
@@ -59,9 +59,21 @@ def main(emotion):
 def get_movies_by_emotion():
     # Get the emotion parameter from the request
     emotion = request.args.get('emotion')
-
+    print(emotion)
     # Get the array of movies associated with the emotion
     movies = main(emotion)
 
     # Return the array of movies in a JSON response
     return jsonify({'movies': movies}), 200
+
+@app.route("/members")
+def members():
+    #return {"members":["Member1","Member2","Member3"]}
+    try:
+        with open('../emo.txt', 'r') as file:
+            return file.read()
+    except FileNotFoundError:
+        return 'File not found', 404
+if __name__=="__main__":
+    app.run(debug=True)
+    
