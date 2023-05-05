@@ -3,6 +3,7 @@ import Home from "./Components/Home";
 import Footer from "./Components/Footer";
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
+import MovieRecc from "./Components/movierecc";
 import { BrowserRouter,Route, Routes} from "react-router-dom";
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
         <Route path="/Footer" element={<Footer />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/Signup" element={<Signup />} />
-
+        <Route path="/MovieRecc" element={<MovieRecc />} />
 
       
     </Routes>

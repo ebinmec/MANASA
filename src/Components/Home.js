@@ -6,18 +6,12 @@ import { FiArrowRight } from "react-icons/fi";
 import About from "./About";
 import Footer from "./Footer";
 
-
 const Home = () => {
   const [data,setData]= useState([{}])
 useEffect(()=> {
-  fetch("/members").then(
-    res => res.json()
-  ).then(
-    data => {
-      setData(data)
-      console.log(data)
-    }
-  )
+  fetch("/members")
+  .then(response => response.text())
+  .then(data => console.log(data))
 },[])
 console.log(data)
   return (
