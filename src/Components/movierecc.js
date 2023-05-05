@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 import backgroundImg from "../Assets/background.jpg";
 import "./movierecc.css"
 import "animate.css";
@@ -12,7 +12,31 @@ export default function MovieRecc() {
     setEmotion(event.target.value);
   };
 
-  const selectMovie=() => {
+  useEffect(()=> {
+   /* fetch("/members").then(
+      data => {
+        console.log(data)
+        fetch(`http://localhost:5000/movies?emotion=${data}`)
+    
+    .then(data => {
+      setMovies(data.movies)
+      console.log(data); // Prints the array of movies to the console
+    })
+    .catch(error => console.error(error));
+      }
+    )
+    */
+    fetch(`http://localhost:5000/movies?emotion=happy`)
+    
+    .then(data => {
+      setMovies(data.movies)
+      console.log(data); // Prints the array of movies to the console
+    })
+    .catch(error => console.error(error));
+      
+  },[])
+  
+ /* const selectMovie=() => {
     fetch(`http://localhost:5000/movies?emotion=${emotion}`)
     .then(response => response.json())
     .then(data => {
@@ -21,8 +45,9 @@ export default function MovieRecc() {
     })
     .catch(error => console.error(error));
   
-  }
+  }*/
   return (
+    
     <div
       style={{
     backgroundImage: `url(${backgroundImg})`,
@@ -46,7 +71,7 @@ export default function MovieRecc() {
     }}
   >
     Movie Recommendation System</h1>
-
+{/*
   <h1 className="text-3xl " style={{textAlign:"center",marginTop:"2rem",fontSize:"1.5rem",fontFamily: "cursive", }}>How are you feeling?</h1><br></br>
 
 <form style={{display:"flex",justifyContent:"space-evenly",fontSize:"1.5rem"}}>
@@ -115,7 +140,7 @@ export default function MovieRecc() {
     </button>
 </div>
 <br></br>
-
+  */}
 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", marginTop: "2rem",margin: "auto", fontSize: "1rem" , fontFamily: "cursive"}}>
   {movies.map((movie, id) => {
     return (
