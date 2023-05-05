@@ -8,7 +8,6 @@ export default function MovieRecc() {
  // const [emotion, setEmotion] = useState();
   const [movies, setMovies] = useState([]);
 
- 
  const firstcall=async()=>{
   var dataR= await (await fetch("http://localhost:5000/members")).text()
   //setEmotion(dataR)
@@ -45,14 +44,14 @@ export default function MovieRecc() {
     <div
       style={{
     backgroundImage: `url(${backgroundImg})`,
-    backgroundSize: "cover",
+    backgroundSize: "111%",
     minHeight: "100vh",
     minWidth: "100vw",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    marginLeft:0
+    /*marginLeft:0*/
   }}
 >
   <h1
@@ -66,11 +65,15 @@ export default function MovieRecc() {
   >
     Movie Recommendation System</h1>
 
-  
-
-    
-
+    <div style={{    textAlign:"center",
+    marginTop: "2rem",
+    fontSize: "1.2rem"}}>
+<button onClick={firstcall} style={{background:"black",borderRadius:"0.5rem",padding:"0.5rem",color:"white",cursor:"pointer"}}>
+      Find Movies
+    </button>
+</div>
 <br></br>
+
   
 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", marginTop: "2rem",margin: "auto", fontSize: "1rem" , fontFamily: "cursive"}}>
   {movies.map((movie, id) => {
