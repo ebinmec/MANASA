@@ -30,9 +30,9 @@ console.log(data)
           <p className="primary-text">
           MANASA provides personalized support and resources to help you manage stress, anxiety, and other mental health concerns, so you can feel your best.
           </p>
-          <button className="secondary-button" >
+          <a href="http://127.0.0.1:4000/"><button className="secondary-button" >
             Chat with Us <FiArrowRight />{" "}
-          </button>
+          </button></a>
         </div>
         <div className="home-image-section">
           <img src={BannerImage} alt="" />
