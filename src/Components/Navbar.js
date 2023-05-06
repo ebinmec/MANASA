@@ -54,7 +54,7 @@ const Navbar = () => {
       
         <a href="/musicrec">Music</a>
         <a href="/Mindful">MindfulExercises</a>
-        <button className="primary-button">Log Out</button>
+        <a href="/"><button className="primary-button">Log Out</button></a>
       </div>
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
