@@ -51,6 +51,7 @@ const Navbar = () => {
       <div className="navbar-links-container">
         <a href="">Home</a>
         <a href="/MovieRecc">Recommendations</a>
+        <a href="http://127.0.0.1:4000/">Chatbot</a>
         <a href="">Mindful Exercises</a>
         <Link to="/Footer"><a href="">Articles</a></Link>
         <button className="primary-button">My Profile</button>

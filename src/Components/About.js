@@ -18,15 +18,16 @@ const About = () => {
           Importance of mental health
         </h1>
         <p className="primary-text">
-          Lorem ipsum dolor sit amet consectetur. Non tincidunt magna non et
-          elit. Dolor turpis molestie dui magnis facilisis at fringilla quam.
-        </p>
+        Your mental health is an important part of your well-being. 
+        This aspect of your welfare determines how you’re able to operate 
+        psychologically, emotionally, and socially among others. </p>
         <p className="primary-text">
-          Non tincidunt magna non et elit. Dolor turpis molestie dui magnis
-          facilisis at fringilla quam.
+        Considering how much of a role your mental health plays in each 
+        aspect of your life, it's important to guard and improve psychological 
+        wellness using appropriate measures.
         </p>
         <div className="about-buttons-container">
-          <button className="secondary-button">Learn More</button>
+          <button className="secondary-button"><a href="https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response">Learn More</a></button>
           {/* <button className="watch-video-button">
             <BsFillPlayCircleFill /> Watch Video
           </button> */}

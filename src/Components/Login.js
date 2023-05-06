@@ -4,35 +4,26 @@ import { Form, Alert } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import GoogleButton from "react-google-button";
 import { useUserAuth } from "../context/UserAuthContext";
-import "../App.css";
-//import { useUserAuth } from "../context/UserAuthContext";
 
 const Login = () => {
-  console.log("testing")
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
- // const { logIn, googleSignIn } = useUserAuth();
+  const { logIn, googleSignIn } = useUserAuth();
   const navigate = useNavigate();
-  //const { user } = useUserAuth();
- // console.log(user)
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     try {
-      //let {_tokenResponse}=await logIn(email, password);
-      /*if(_tokenResponse.email=="adminmec@gmail.com"){
-        navigate("/admin")
-      }else{
-        navigate("/home");
-      }
-      */
+      await logIn(email, password);
+      navigate("/home");
     } catch (err) {
       setError(err.message);
     }
   };
 
-  /*const handleGoogleSignIn = async (e) => {
+  const handleGoogleSignIn = async (e) => {
     e.preventDefault();
     try {
       await googleSignIn();
@@ -40,11 +31,11 @@ const Login = () => {
     } catch (error) {
       console.log(error.message);
     }
-  };*/
+  };
 
   return (
     <>
-      <div className="p-4 box"  style={{ width: "400px" }}>
+      <div className="p-4 box">
         <h2 className="mb-3">MANASA</h2>
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={handleSubmit}>
@@ -65,15 +56,22 @@ const Login = () => {
           </Form.Group>
 
           <div className="d-grid gap-2">
-           <Link to="/Home"> <Button variant="primary" type="Submit">
+            <Button variant="primary" type="Submit">
               Log In
-            </Button></Link>
+            </Button>
           </div>
         </Form>
-        
+        <hr />
+        <div>
+          <GoogleButton
+            className="g-btn"
+            type="dark"
+            onClick={handleGoogleSignIn}
+          />
+        </div>
       </div>
-      <div className="p-4 box mt-3 text-center " style={{ width: "400px" }}>
-        Don't have an account? <Link to="/Signup">Sign up</Link>
+      <div className="p-4 box mt-3 text-center">
+        Don't have an account? <Link to="/signup">Sign up</Link>
       </div>
     </>
   );
