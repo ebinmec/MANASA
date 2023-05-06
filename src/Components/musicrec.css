@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0 20%;
+    padding: 0;
+}
+
+li {
+    background-color: rgb(125, 178, 192);
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+li:hover {
+    background-color: #f2f2f2;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.song-name {
+    font-weight: bold;
+}
+
+.song-artist {
+    font-style: italic;
+}
+
+.song-url {
+    color: #666;
+}
