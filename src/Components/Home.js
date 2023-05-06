@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 import { FiArrowRight } from "react-icons/fi";
 import About from "./About";
 import Footer from "./Footer";
-
+import Quotes from "./Quotes";
 const Home = () => {
   const [data,setData]= useState([{}])
 useEffect(()=> {
@@ -18,6 +18,7 @@ console.log(data)
     
     <div className="home-container">
       <Navbar />
+      
       <div className="home-banner-container">
         <div className="home-bannerImage-container">
           <img src={BannerBackground} alt="" />
@@ -37,6 +38,7 @@ console.log(data)
           <img src={BannerImage} alt="" />
         </div>
       </div>
+      <Quotes/> 
       <About/>
       <Footer/>
     </div>
