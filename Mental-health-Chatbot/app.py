@@ -48,7 +48,7 @@ def predict_class(sentence, model):
     return return_list
 def getResponse(ints, intents_json):
     tag = ints[0]['intent']
-    emotionfile=open("E:/MANASA-1/emo.txt","w")
+    emotionfile=open("C:\Users\Karthika\desktop\MANASA\emo.txt","w")
     list_of_intents = intents_json['intents']
     
     for i in list_of_intents:

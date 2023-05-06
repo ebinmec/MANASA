@@ -1,7 +1,7 @@
 import pymongo
 
 # Create a MongoClient instance
-client = pymongo.MongoClient("mongodb://localhost:27017/")
+client = pymongo.MongoClient("mongodb+srv://jabirafarhath:jabs234@cluster0.azvbhka.mongodb.net/?retryWrites=true&w=majority")
 
 # Access the database and collection
 db = client["musicDB"]

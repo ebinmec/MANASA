@@ -18,7 +18,7 @@ import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import HelpIcon from '@mui/icons-material/Help';
 import {Link}  from "react-router-dom";
 import Footer from "./Footer";
-
+import Mindful from "./Mindful";
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const menuOptions = [
@@ -53,8 +53,10 @@ const Navbar = () => {
         <a href="/MovieRecc">Movie </a>
       
         <a href="/musicrec">Music</a>
+        <a href="/Mindful">MindfulExercises</a>
        
         <a className="primary-button" href="/">Logout</a>
+        <button className="primary-button">Log Out</button>
       </div>
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
