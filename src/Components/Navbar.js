@@ -50,11 +50,11 @@ const Navbar = () => {
       </div>
       <div className="navbar-links-container">
        
-        <a href="/MovieRecc">Movie Recommendation</a>
+        <a href="/MovieRecc">Movie </a>
       
         <a href="/musicrec">Music</a>
        
-        <button className="primary-button">My Profile</button>
+        <a className="primary-button" href="/">Logout</a>
       </div>
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
