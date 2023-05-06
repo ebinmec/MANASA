@@ -51,15 +51,12 @@ const Navbar = () => {
         <a href="/MovieRecc">Movie </a>
 
         <a href="/musicrec">Music</a>
-<<<<<<< HEAD
 
         <a className="primary-button" href="/">
           Logout
         </a>
-=======
         <a href="/Mindful">MindfulExercises</a>
         <a href="/"><button className="primary-button">Log Out</button></a>
->>>>>>> 132b3643f3ed0ab073fe5414c14b449f23a3185c
       </div>
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
