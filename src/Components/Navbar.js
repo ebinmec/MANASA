@@ -50,11 +50,12 @@ const Navbar = () => {
       </div>
       <div className="navbar-links-container">
        
-        <a href="/MovieRecc">Movie Recommendation</a>
+        <a href="/MovieRecc">Movie </a>
       
         <a href="/musicrec">Music</a>
-
+        <a href="/Mindful">MindfulExercises</a>
        
+        <a className="primary-button" href="/">Logout</a>
         <button className="primary-button">Log Out</button>
       </div>
       <div className="navbar-menu-container">
