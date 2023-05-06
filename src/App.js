@@ -8,6 +8,7 @@ import ProtectedRoute from "./Components/ProtectedRoute";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
 import Footer from "./Components/Footer";
 import MovieRecc from "./Components/movierecc";
+import MusicRecs from "./Components/musicrec";
 
 function App() {
  
@@ -27,6 +28,8 @@ function App() {
               <Route path="/" element={<Login />} />
               <Route path="/Signup" element={<Signup />} />
               <Route path="/MovieRecc" element={<MovieRecc />} />
+              <Route path="/musicrec" element={<MusicRecs />} />
+              
             </Routes>
           </UserAuthContextProvider>
      </div>
