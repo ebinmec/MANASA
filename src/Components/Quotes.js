@@ -19,8 +19,8 @@ function Quotes() {
         .then(res=> res.json())
         .then(data=>{
             console.log(data);
-            setQuote(data[1].text);
-            setAuthor(data[1].author);
+            setQuote(data[Math.floor((Math.random() * 1600) + 1)].text);
+            setAuthor(data[Math.floor((Math.random() * 1600) + 1)].author);
         })
     }
 return(
