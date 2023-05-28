@@ -52,9 +52,7 @@ const Navbar = () => {
 
         <a href="/musicrec">Music</a>
 
-        <a className="primary-button" href="/">
-          Logout
-        </a>
+        
         <a href="/Mindful">MindfulExercises</a>
         <a href="/"><button className="primary-button">Log Out</button></a>
       </div>
